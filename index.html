@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div class="add-task-form">
+                <input type="text" v-model="task" id="input-form" class="input-form" placeholder="Write Your Task...">
+                <button class="add-task-btn" onclick="addTask()">Add</button>
+            </div>
+            <div class="task-content">
+
+                <div class="task-status">
+                    <div class="task-status-header">
+                        <h2>To Do</h2>
+                    </div>
+                    <div class="task-list todo-task">
+                        <!-- <h4 class="todo" draggable="true">Task 01</h4> -->
+                    </div>
+                </div>
+
+                <div class="task-status">
+                    <div class="task-status-header">
+                        <h2>In Progress</h2>
+                    </div>
+                    <div class="task-list progress-task">
+                        
+                    </div>
+                </div>
+
+                <div class="task-status">
+                    <div class="task-status-header">
+                        <h2>Done</h2>
+                    </div>
+                    <div class="task-list done-task">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
