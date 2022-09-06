@@ -54,9 +54,12 @@ async function addTask() {
             const h4 = document.createElement("h4");
             h4.classList.add('todo');
             h4.setAttribute('draggable', true);
+            h4.setAttribute('data-id', data.id);
             const text_node = document.createTextNode(`${data.name}`);
             h4.appendChild(text_node);
             todo_task_wrapper.appendChild(h4);
+            h4.addEventListener('dragstart', dragStart);
+            h4.addEventListener('dragend', dragEnd);
             document.getElementById('input-form').value = '';
         } catch (error) {
             console.log(error);
@@ -106,7 +109,6 @@ function dragLeave() {
 async function dragDrop() {
 
     let status;
-    const name = draggableTodo.innerText;
     const id = draggableTodo.getAttribute('data-id');
     this.querySelector('.task-list').appendChild(draggableTodo);
     const task_container = this.querySelector('.task-list');
