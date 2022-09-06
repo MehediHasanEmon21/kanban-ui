@@ -23,7 +23,7 @@
     color: #FF654A;
     font-weight: 700;
     cursor: pointer;
-    font-size: 17px
+    font-size: 17px;
   }
   .task-content{
     display: grid;
@@ -36,6 +36,7 @@
     height: 500px;
     overflow-y: auto;
     text-align: center;
+    transition: 1s;
   }
   .task-status-header {
     background: #FF6347;
@@ -59,4 +60,7 @@
   .task-list h4:hover{
     background: gray;
     color: white;
+  }
+  .drag-enter{
+    transform: scale(1.1);
   }

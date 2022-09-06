@@ -98,16 +98,16 @@ function dragOver(e) {
 }
 
 function dragEnter() {
-
+    this.classList.add('drag-enter');
 }
 
 function dragLeave() {
-
+    this.classList.remove('drag-enter');
 }
 
 // drop the task
 async function dragDrop() {
-
+    this.classList.remove('drag-enter');
     let status;
     const id = draggableTodo.getAttribute('data-id');
     this.querySelector('.task-list').appendChild(draggableTodo);
